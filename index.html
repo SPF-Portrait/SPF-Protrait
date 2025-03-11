@@ -166,14 +166,15 @@
           <h2 class="title is-2" style="font-family: Comic Sans MS"><div class="x-gradient-font">Abstract</div></h2>
           <div class="content has-text-justified">
             <p>
-              Recent advances in garment-centric image generation from text and image prompts based on diffusion models are impressive. However, existing methods lack support for various combinations of attire, and struggle to preserve the garment details while maintaining faithfulness to the text prompts, limiting their performance across diverse scenarios. 
-              In this paper, we focus on a new task, i.e., <b><i>Multi-Garment Virtual Dressing</i></b>, and we propose a novel <b>AnyDressing</b> method for customizing characters conditioned on any combination of garments and any personalized text prompts. 
-              AnyDressing comprises two primary networks named GarmentsNet and DressingNet, which are respectively dedicated to extracting detailed clothing features and generating customized images.
-              Specifically, we propose an efficient and scalable module called Garment-Specific Feature Extractor in GarmentsNet to individually encode garment textures in parallel. This design prevents garment confusion while ensuring network efficiency. 
-              Meanwhile, we design an adaptive Dressing-Attention mechanism and a novel Instance-Level Garment Localization Learning strategy in DressingNet to accurately inject multi-garment features into their corresponding regions. This approach efficiently integrates multi-garment texture cues into generated images and further enhances text-image consistency. 
-              Additionally, we introduce a Garment-Enhanced Texture Learning strategy to improve the fine-grained texture details of garments. 
-              Thanks to our well-craft design, AnyDressing can serve as a plug-in module to easily integrate with any community control extensions for diffusion models, improving the diversity and controllability of synthesized images. 
-              Extensive experiments show that AnyDressing achieves state-of-the-art results. 
+              Fine-tuning a pre-trained Text-to-Image (T2I) model on a tailored portrait dataset is the mainstream method for text-driven customization of portrait attributes.
+              Due to <b><i>Semantic Pollution</i></b> during fine-tuning, existing methods struggle to maintain the original model's behavior and achieve incremental learning while customizing target attributes.
+              To address this issue, we propose  <b><i>SPF-Portrait</i></b>, a pioneering work to purely understand customized semantics while eliminating semantic pollution in text-driven portrait customization. 
+              In our SPF-Portrait, we propose a dual-path pipeline that introduces the original model as a reference for the conventional fine-tuning path.
+              Through contrastive learning, we ensure adaptation to target attributes and purposefully align other unrelated attributes with the original portrait.
+              We introduce a novel Semantic-Aware Fine Control Map, which represents the precise response regions of the target semantics, to spatially guide the alignment process between the contrastive paths.
+              This alignment process not only effectively preserves the performance of the original model but also avoids over-alignment.
+              Furthermore, we propose a novel response enhancement mechanism to reinforce the performance of target attributes, while mitigating representation discrepancy inherent in direct cross-modal supervision.
+              Extensive experiments demonstrate that SPF-Portrait achieves state-of-the-art performance.
             </p>
           </div>
         </div>
@@ -503,11 +504,9 @@
       <p>
         If you find this project useful in your research, please consider cite:
       </p>
-      <pre><code>@article{li2024anydressing,
-        title={AnyDressing: Customizable Multi-Garment Virtual Dressing via Latent Diffusion Models},
-        author={Xinghui Li and Qi Chao Sun and Pengze Zhang and Fulong Ye and Zhichao Liao and Wanquan Feng and Songtao Zhao and Qian He},
-        journal={arXiv preprint arXiv:2412.04146},
-        year={2024}
+      <pre><code>
+        @article{xian2025SPF,
+        title={SPF-Portrait: Towards Pure Portrait Customization with Semantic Pollution-Free Fine-tuning},
   }</code></pre>
     </div>
   </section>
