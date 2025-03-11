@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AnyDressing: Customizable Multi-Garment Virtual Dressing via Latent Diffusion Models. ">
+  <meta name="keywords" content="customize characters wearing any combination of garments!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnyDressing: Customizable Multi-Garment Virtual Dressing via Latent Diffusion Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/dressing.svg ">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span style="
+              font-weight: bold;
+              background: linear-gradient(107.54deg, #0078d4 .39%, #8661c5 51.23%, #ff9349 100%);
+              -webkit-background-clip: text;
+              color: transparent;
+            ">
+      AnyDressing
+    </span>: Customizable Multi-Garment Virtual Dressing via Latent Diffusion Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/Crayon-Shinchan">Xinghui Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/sun631998316">Qichao Sun</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/PangzeCheung">Pengze Zhang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=-BbQ5VgAAAAJ&hl=en&oi=ao">Fulong Ye</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a
+                  href="https://scholar.google.com.hk/citations?user=4eRwbOEAAAAJ&hl=zh-CN">Zhichao Liao</a><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=na2akZYAAAAJ&view_op=list_works&sortby=pubdate">Wanquan Feng</a><sup>1✉</sup>,</span>
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="https://crayon-shinchan.github.io/AnyDressing/">Songtao Zhao</a><sup>1✉</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&authuser=1&user=9rWWCgUAAAAJ">Qian He</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>ByteDance,</span>&nbsp;
+              <span class="author-block"><sup>2</sup>Tsinghua University</span>&nbsp
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>✉</sup>Corresponding author</span>&nbsp
+            </div>
+
+            <!-- <div class="is-size-5 publication-authors">
+              <p style="color: green;">We'd like to thank Yongsheng Dong and Guoliang Xu, for the valuable help on data processing.</p>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.04146"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"> 
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Crayon-Shinchan/AnyDressing" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="" class="wide-image"/>
+
+        <h2 class="content has-text-justified">
+          <p>
+            <b><i>Reliability: </i></b> AnyDressing is well-suited for a variety of scenes and complex garments. 
+          </p>
+          <p>
+            <b><i>Compatibility: </i></b> AnyDressing is compatible with LoRA and plugins such as ControlNet and FaceID.
+          </p>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2" style="font-family: Comic Sans MS"><div class="x-gradient-font">Abstract</div></h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent advances in garment-centric image generation from text and image prompts based on diffusion models are impressive. However, existing methods lack support for various combinations of attire, and struggle to preserve the garment details while maintaining faithfulness to the text prompts, limiting their performance across diverse scenarios. 
+              In this paper, we focus on a new task, i.e., <b><i>Multi-Garment Virtual Dressing</i></b>, and we propose a novel <b>AnyDressing</b> method for customizing characters conditioned on any combination of garments and any personalized text prompts. 
+              AnyDressing comprises two primary networks named GarmentsNet and DressingNet, which are respectively dedicated to extracting detailed clothing features and generating customized images.
+              Specifically, we propose an efficient and scalable module called Garment-Specific Feature Extractor in GarmentsNet to individually encode garment textures in parallel. This design prevents garment confusion while ensuring network efficiency. 
+              Meanwhile, we design an adaptive Dressing-Attention mechanism and a novel Instance-Level Garment Localization Learning strategy in DressingNet to accurately inject multi-garment features into their corresponding regions. This approach efficiently integrates multi-garment texture cues into generated images and further enhances text-image consistency. 
+              Additionally, we introduce a Garment-Enhanced Texture Learning strategy to improve the fine-grained texture details of garments. 
+              Thanks to our well-craft design, AnyDressing can serve as a plug-in module to easily integrate with any community control extensions for diffusion models, improving the diversity and controllability of synthesized images. 
+              Extensive experiments show that AnyDressing achieves state-of-the-art results. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <!-- Paper poster -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-">
+            <h2 class="title is-2" style="font-family: Comic Sans MS"><div class="x-gradient-font">How does it work?</div></h2>
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+                <img src="static/images/overview.png" alt="" width="1600" />
+              </td>
+            </div>
+            <div class="content has-text-justified">
+              Given <i>N</i> target garments, AnyDressing customizes a character dressed in multiple target garments. 
+              The GarmentsNet leverages the <b>Garment-Specific Feature Extractor (GFE)</b> module to extract detailed features from multiple garments. 
+              The DressingNet integrates these features for virtual dressing using a <b>Dressing-Attention (DA)</b> module and an <b>Instance-Level Garment Localization Learning</b> mechanism. 
+              Moreover, <b>Garment-Enhanced Texture Learning (GTL)</b> strategy further enhances details. 
+            </div>
+          </div>
+  </section>
+  <!--End paper poster -->
+
+
+  <!-- Video grid single ref -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-2" style="font-family: Comic Sans MS"><div class="x-gradient-font">Comparisons with State-of-the-Arts</div></h2>
+
+            <div class="content has-text-centered">
+              <td colspan="3">
+                <img src="static/images/compare_1.png" alt="" width="2160" />
+                <p>
+                  <b>Qualitative comparisons</b> with state-of-the-art methods of single-garment and multi-garment dressing.
+                </p>
+              </td>
+            </div>
+          </div>
+        </div>
+        <!-- <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Comparisons with IP-Adapter</h2>
+        <div id="results-carousel-ipadapter" class="carousel results-carousel">
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/compare_2.png"
+                      alt="Puppet."/>
+            </div>
+          </div>
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/compare_3.png"
+                      alt="Puppet."/>
+            </div>
+          </div>
+        </div> -->
+        <!-- <p><br></p> -->
+      </div>
+    </div>
+  </section>
+  <!-- End video grid single ref -->
+
+
+  <!-- Video grid Extension -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2 has-text-centered" style="font-family: Comic Sans MS"><div class="x-gradient-font">Various Virtual Dressing Results</div></h2>
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Realistic Scenes</h2>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+              <img src="static/images/hat1.png" alt="" style="width: 92%; margin-left: 3%;" />
+          </td>
+        </div>
+        <p style="margin-bottom: 5px;"><br></p>
+        
+        <div class="columns is-centered has-text-justified">
+          <td colspan="4">
+              <img src="static/images/ours1.gif" alt="" width="2160" />
+          </td>
+        </div>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+              <img src="static/images/ours2.gif" alt="" width="2160" />
+          </td>
+        </div>
+        <!-- <p style="margin-bottom: 5px;"><br></p> -->
+
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Stylized Scenes</h2>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+              <img src="static/images/hat2.png" alt="" style="width: 92%;" />
+          </td>
+        </div>
+        <p style="margin-bottom: 5px;"><br></p>
+
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+              <img src="static/images/ours3.gif" alt="" width="2160" />
+          </td>
+        </div>
+        <p style="margin-bottom: 5px;"><br></p>
+
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> <b><i>AnyDressing</i></b> + IPA & ControlNet</h2>
+        <!-- <div id="results-carousel-more" class="carousel results-carousel"> -->
+        <div class="carousel results-carousel">
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip1.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip2.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip3.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip4.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip5.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/ip6.jpg"
+                      alt="Puppet." width="3000"/>
+            </div>
+          </div>
+
+        </div>
+        <p style="margin-bottom: 20px;"><br></p>
+
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> <b><i>AnyDressing</i></b> + LoRA</h2>
+        <!-- <div id="results-carousel-more" class="carousel results-carousel"> -->
+        <div class="carousel results-carousel">
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/lora_1.jpg"
+                      alt="Puppet."/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/lora_2.jpg"
+                      alt="Puppet."/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/lora_4.jpg"
+                      alt="Puppet."/>
+            </div>
+          </div>
+        </div>
+
+        <div id="results-carousel-more" class="carousel results-carousel">
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/lora_3.jpg"
+                      alt="Puppet."/>
+            </div>
+          </div>
+
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/lora_5.jpg"
+                      alt="Puppet."/>
+            </div>
+          </div>
+        </div>
+        <p style="margin-bottom: 10px;"><br></p>
+        <!-- <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+            <img src="static/images/style_transfer.png" alt="" width="700" />
+          </td>
+        </div> -->
+
+        <!-- <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Style Mixing</h2>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+            <img src="static/images/style_mixing.png" alt="" width="1080" />
+          </td>
+        </div>
+        <p style="margin-bottom: 20px;"><br></p>
+
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> DreamBooth/LoRA + <b><i>DEADiff</i></b></h2>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+            <img src="static/images/dreambooth_lora.png" alt="" width="1080" />
+          </td>
+        </div>
+        <p style="margin-bottom: 20px;"><br></p>
+
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Stylized Reference Object Generation</h2>
+        <div class="columns is-centered has-text-justified">
+          <td colspan="3">
+            <img src="static/images/semantic_stylization.png" alt="" width="1080" />
+          </td>
+        </div>
+        <div class="content has-text-justified">
+          <td colspan="3">
+            <p>
+              This is a novel application of <b><i>DEADiff</i></b>. Instructed by the "content" condition,  <b><i>DEADiff</i></b> can extract the semantics of a reference image and achieve its stylization under the guidance of an extra text prompt.
+            </p>
+          </td>
+        </div>
+        <p style="margin-bottom: 20px;"><br></p> -->
+
+        <!-- <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> ControlNet + <b><i>DEADiff</i></b></h2>
+        <div id="results-carousel-more" class="carousel results-carousel">
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/controlnet1.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/controlnet2.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/controlnet3.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2 has-text-centered" style="font-family: Comic Sans MS"><div class="x-gradient-font">Customized Characters</div></h2>
+        <video id="teaser" controls autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+  <!-- Video grid Extension -->
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="section-title">
+          <h2 class="title is-2 is-centered">More Examples</h2>
+        </div>
+  
+        <div id="results-carousel-more" class="carousel results-carousel">
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/more_1.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/more_2.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+  
+          <div class="item item-puppet">
+            <div class="carousel-content">
+              <img src="static/images/more_3.png"
+                     alt="Puppet."/>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video grid multi ref -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <!-- <h2 class="title">BibTeX</h2> -->
+      <h2 class="title is-2" style="font-family: Comic Sans MS"><div class="x-gradient-font">BibTeX</div></h2>
+      <p>
+        If you find this project useful in your research, please consider cite:
+      </p>
+      <pre><code>@article{li2024anydressing,
+        title={AnyDressing: Customizable Multi-Garment Virtual Dressing via Latent Diffusion Models},
+        author={Xinghui Li and Qi Chao Sun and Pengze Zhang and Fulong Ye and Zhichao Liao and Wanquan Feng and Songtao Zhao and Qian He},
+        journal={arXiv preprint arXiv:2412.04146},
+        year={2024}
+  }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
+        <a class="icon-link"
+           href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This project is intended solely for academic research and effect demonstration. No commercial benefits are derived from it. Most models and clothing images used are from internet and public dataset (VITON-HD). 
+              All images and brands are the property of their respective owners.
+            </p>
+            <!-- <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p> -->
+            <p>
+              Website source code based on the <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
