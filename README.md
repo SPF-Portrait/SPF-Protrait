@@ -40,7 +40,7 @@ While fine-tuning pre-trained Text-to-Image (T2I) models on portrait datasets en
   🔥 For more results, visit our <a href="https://csgo-gen.github.io"><strong>homepage</strong></a> 🔥
 
 <p align="center">
-  <img src="assets/teaser.png">
+  <img src="assets/teaser.jpg">
 </p>
 
 ## 💖 Citation
