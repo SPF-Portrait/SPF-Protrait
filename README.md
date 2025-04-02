@@ -30,7 +30,7 @@ While fine-tuning pre-trained Text-to-Image (T2I) models on portrait datasets en
 ## 💻 Pipeline
 
 <p align="center">
-  <img src="assets/pipeline.jpg">
+  <img src="assets/pipeline.png">
 </p>
 
 ## 🚅 Capabilities 
@@ -40,7 +40,7 @@ While fine-tuning pre-trained Text-to-Image (T2I) models on portrait datasets en
   🔥 For more results, visit our <a href="https://csgo-gen.github.io"><strong>homepage</strong></a> 🔥
 
 <p align="center">
-  <img src="assets/teaser.jpg">
+  <img src="assets/teaser.png">
 </p>
 
 ## 💖 Citation
