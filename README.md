@@ -1,13 +1,13 @@
 <div align="center">
 <h1>SPF-Portrait: Towards Pure Portrait Customization with Semantic Pollution-Free Fine-tuning</h1>
 
-[**Xiaole Xian**](https://scholar.google.com/citations?user=XpaHZywAAAAJ&hl=zh-CN)<sup>1 * </sup>· [**Zhichao Liao**](https://scholar.google.com.hk/citations?user=4eRwbOEAAAAJ&hl=zh-CN)<sup>2 *</sup> · [**Qingyu Li**](https://github.com/wangqixun)<sup>3</sup> · [**Wenyu Qin**](https://huggingface.co/baymin0220)<sup>3</sup> · [**Pengfei Wan**](https://github.com/aihao2000)<sup>3</sup> · [**Weicheng Xie**](https://github.com/DannHuang)<sup>1✉</sup> · [**Long Zeng**](https://zechao-li.github.io/)<sup>2 ✉</sup> · [**Linlin Shen**](https://github.com/DannHuang)<sup>1</sup> · [**Pingfa Feng**](https://github.com/DannHuang)<sup>2</sup>
+[**Xiaole Xian**](https://scholar.google.com/citations?user=XpaHZywAAAAJ&hl=zh-CN)<sup> * ♰ 1</sup>· [**Zhichao Liao**](https://scholar.google.com.hk/citations?user=4eRwbOEAAAAJ&hl=zh-CN)<sup>♰ * 2</sup> · [Qingyu Li]()<sup>3</sup> · [Wenyu Qin]()<sup>3</sup> · [Pengfei Wan]()<sup>3</sup> · [Weicheng Xie]()<sup>1✉</sup> · [Long Zeng]()<sup>2 ✉</sup> · [Linlin Shen]()<sup>1</sup> · [Pingfa Feng]()<sup>2</sup>
 
 <sup>1</sup>Shenzhen University · <sup>2</sup>Tsinghua University · <sup>3</sup>Kuaishou Technology
 
 <sup>*</sup>equal contributions · <sup>♰</sup> Internship at KwaiVGI, Kuaishou Technology · <sup>✉</sup>corresponding authors 
 
-<a href='https://spf-portrait.github.io/SPF-Portrait/'><img src='https://img.shields.io/badge/Project-Page-green'></a>  <a href='https://arxiv.org/abs/2503.23907'><img src='https://img.shields.io/badge/arXiv-SPF Portrait-red'></a>  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/)  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-App-red)](https://huggingface.co/)  [![GitHub](https://img.shields.io/github/stars/SPF-Portrait/SPF-Portrait?style=social)](https://github.com/SPF-Portrait/SPF-Portrait)
+<a href='https://spf-portrait.github.io/SPF-Portrait/'><img src='https://img.shields.io/badge/Project-Page-green'></a>  <a href='https://arxiv.org/abs/2504.00396'><img src='https://img.shields.io/badge/arXiv-SPF Portrait-red'></a>  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/)  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-App-red)](https://huggingface.co/)  [![GitHub](https://img.shields.io/github/stars/SPF-Portrait/SPF-Portrait?style=social)](https://github.com/SPF-Portrait/SPF-Portrait)
 </div>
   
 ##  🔥 Updates 
