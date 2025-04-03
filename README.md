@@ -1,4 +1,4 @@
-<div align="center">  <img src='assets/logo2.png' style="height:250px"></img>  </div>
+<div align="center">  <img src='assets/logo.png' style="height:250px"></img>  </div>
 
 <div align="center">
 <h1>SPF-Portrait: Towards Pure Portrait Customization with Semantic Pollution-Free Fine-tuning</h1>
