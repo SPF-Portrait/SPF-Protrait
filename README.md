@@ -64,5 +64,4 @@ If you find SPF-Portrait useful for your research, welcome to 🌟 this repo and
   journal={arXiv preprint arXiv:2504.00396},
   year={2025}
 }
-}
 ```
