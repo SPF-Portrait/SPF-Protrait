@@ -58,10 +58,11 @@ Extensive experiments demonstrate that SPF-Portrait achieves state-of-the-art pe
 If you find SPF-Portrait useful for your research, welcome to 🌟 this repo and cite our work using the following BibTeX:
 
 ```bibtex
-@article{xian2024spf,
-       title={SPF-Portrait: Towards Pure Portrait Customization with Semantic Pollution-Free Fine-tuning}, 
-       author={Xiaole Xian and Zhichao Liao and Qingyu Li and Wenyu Qin and Pengfei Wan and Weicheng Xie, Long Zeng and Linlin Shen and Pingfa Feng},
-       year={2025},
-       journal = {arXiv 2504.00396},
+@article{xian2025spf,
+  title={SPF-Portrait: Towards Pure Portrait Customization with Semantic Pollution-Free Fine-tuning},
+  author={Xian, Xiaole and Liao, Zhichao and Li, Qingyu and Qin, Wenyu and Wan, Pengfei and Xie, Weicheng and Zeng, Long and Shen, Linlin and Feng, Pingfa},
+  journal={arXiv preprint arXiv:2504.00396},
+  year={2025}
+}
 }
 ```
