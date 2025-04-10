@@ -20,8 +20,8 @@
 
 - [x] Technical report
 - [ ] Inference code
-- [ ] Pre-trained weight for inference [SDv1.5]
-- [ ] Demo deployment in Huggingface🤗
+- [ ] Pre-trained weight for inference [SDv1.5] in Huggingface Model🤗
+- [ ] Demo deployment in Huggingface Space🤗
 - [ ] Training code
 
 （Thanks for your attention! The checkpoints and codes are coming soon!）
