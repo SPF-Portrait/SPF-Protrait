@@ -9,13 +9,13 @@
 
 <sup>*</sup>Equal contributions · <sup>♰</sup> Internship at KwaiVGI, Kuaishou Technology · <sup>✉</sup>Corresponding authors 
 
-<a href='https://spf-portrait.github.io/SPF-Portrait/'><img src='https://img.shields.io/badge/Project-Page-green'></a>  
-<a href='https://arxiv.org/abs/2504.00396'><img src='https://img.shields.io/badge/arXiv-SPF Portrait-red'></a>  
+<a href='https://spf-portrait.github.io/SPF-Portrait/'><img src='https://img.shields.io/badge/Project-Page-green'></a>  &nbsp; 
+<a href='https://arxiv.org/abs/2504.00396'><img src='https://img.shields.io/badge/arXiv-SPF Portrait-red'></a>  &nbsp; 
 <a href="https://github.com/KwaiVGI/SPF-Portrait"><img src="https://img.shields.io/badge/GitHub-SPF Portrait-9E95B7?logo=github"></a> &nbsp; 
 <br>
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/)  
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-App-red)](https://huggingface.co/)  
-[![GitHub](https://img.shields.io/github/stars/KwaiVGI/SPF-Portrait?style=social)](https://github.com/KwaiVGI/SPF-Portrait)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/)  &nbsp; 
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-App-red)](https://huggingface.co/)  &nbsp; 
+[![GitHub](https://img.shields.io/github/stars/KwaiVGI/SPF-Portrait?style=social)](https://github.com/KwaiVGI/SPF-Portrait) &nbsp; 
 </div>
   
 ##  🔥 Updates 
