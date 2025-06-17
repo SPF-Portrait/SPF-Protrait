@@ -47,7 +47,7 @@ Extensive experiments demonstrate that SPF-Portrait achieves state-of-the-art pe
 ## 💻 Pipeline
 
 <p align="center">
-  <img src="assets/pipeline.png">
+  <img src="assets/pipeline.jpg">
 </p>
 
 ## 🚅 Capabilities 
