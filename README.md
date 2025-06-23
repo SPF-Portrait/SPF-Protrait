@@ -57,7 +57,7 @@ Extensive experiments show that SPF-Portrait achieves state-of-the-art performan
   🔥 For more results, visit our <a href="https://spf-portrait.github.io/SPF-Portrait/"><strong>homepage</strong></a>
 
 <p align="center">
-  <img src="assets/teaser.jpg">
+  <img src="assets/teaser.png">
 </p>
 
 ## 💖 Citation
